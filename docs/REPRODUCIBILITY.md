@@ -35,6 +35,9 @@ diagnostic only and never enter the target gate.
 trainer changes are limited to standalone path resolution and durable logging
 metadata; the algorithmic contract is recorded in `src/source_manifest.json`.
 The result tables in `results/` are a snapshot, not a claim that every target
-has been met. Reproducing historical scores requires the original Isaac Gym
-environment, hardware, and raw experiment artifacts, which are not included
-in Git.
+has been met. `config/round_000_plan.json` is the clean paper-aligned baseline
+template; the accepted historical tunables are recorded in
+`results/incumbent_configs.json` and the compact score/config snapshot in
+`results/incumbent_snapshot.json`. Reproducing historical scores still requires
+the original Isaac Gym environment, hardware, and raw experiment artifacts,
+which are not included in Git.

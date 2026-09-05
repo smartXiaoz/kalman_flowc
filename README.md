@@ -7,10 +7,13 @@ not a claim that every benchmark target has been reached.
 
 ## Result Status
 
-The checked-in result snapshot is in [`results/RESULTS.md`](results/RESULTS.md).
-It was generated from the latest complete cohorts available at the snapshot
-time (932 unique complete cohorts; round 117 was the latest completed round;
-round 118 was still running and is excluded).
+The checked-in result snapshot is in [`results/RESULTS.md`](results/RESULTS.md);
+the machine-readable scores and incumbent tunables are in
+[`results/incumbent_snapshot.json`](results/incumbent_snapshot.json) and
+[`results/incumbent_configs.json`](results/incumbent_configs.json). It was
+generated from the latest complete cohorts available at the snapshot time
+(932 unique complete cohorts; round 117 was the latest completed round; round
+118 was still running and is excluded).
 
 Nine of twelve accepted incumbents meet at least 90% of the paper mean. Three
 remain below the target:
@@ -158,7 +161,11 @@ python -u src/flow_ppo_single2.py \
   --reward-log-path experiments/smoke_humanoid_seed1/rewards.txt
 ```
 
-Materialize the complete 12-environment baseline without launching it:
+Materialize the complete 12-environment Round-000 baseline without launching
+it. This plan is the paper-aligned starting template; it is not a claim that
+the historical accepted incumbent configuration for every environment is the
+same as this baseline. The accepted historical tunables are listed separately
+in `results/incumbent_configs.json`.
 
 ```bash
 python scripts/materialize_round.py \
