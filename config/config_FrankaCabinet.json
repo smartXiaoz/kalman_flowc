@@ -37,7 +37,7 @@
   "target_norm_ema_tau": 0.99,
   "cov_weight_clip": null,
   "alpha_warmup_updates": 0,
-  "ess_floor": 0,
+  "ess_floor": 0.0,
   "velocity_clip_delta": 0.2,
   "old_critic_update": "hard",
   "old_critic_ema_tau": 0.995,
@@ -50,9 +50,9 @@
   "total_timesteps": 80000000,
   "reward_scaler": 0.01,
   "acf_coef": 0.1,
-  "vf_coef": 1,
+  "vf_coef": 1.0,
   "flow_sigma": 0.1,
   "prior_std": 0.9,
   "target_norm": "running_return",
-  "cov_floor": 0.01
+  "cov_floor": 0.005
 }

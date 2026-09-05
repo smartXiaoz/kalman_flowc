@@ -54,5 +54,5 @@
   "flow_sigma": 0.1,
   "prior_std": 1.05,
   "target_norm": "none",
-  "cov_floor": 0
+  "cov_floor": 0.0
 }

@@ -1,8 +1,0 @@
-# Python 3.8 / CUDA 11.8 versions used for the published result snapshot.
-# Install Isaac Gym and IsaacGymEnvs separately; they are not distributed on
-# PyPI and are intentionally not vendored in this repository.
-numpy==1.24.4
-gym==0.23.1
-tyro==0.5.10
-torchcfm==1.0.5
-torchdiffeq==0.2.5
