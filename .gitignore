@@ -1,0 +1,43 @@
+# Python and local tooling
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Runtime output. Keep the repository's source and curated `results/` snapshot
+# small; full rounds belong in local storage or an artifact service.
+runs/
+src/runs/
+experiments/*
+!experiments/.gitkeep
+!experiments/README.md
+state/*
+!state/.gitkeep
+!state/README.md
+
+# Training and visualization artifacts
+*.log
+*.jsonl
+*.pt
+*.pth
+*.ckpt
+*.npz
+*.npy
+*.mp4
+*.avi
+*.mkv
+*.tfevents.*
+
+# Credentials and local environment files
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+auth.json
+
+# Temporary files and editor metadata
+*.tmp
+*.swp
+.DS_Store

@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "status": "continue",
+  "round_id": "round_000_baseline",
+  "stage": 1,
+  "reasoning": [
+    "Run one complete four-seed cohort for every paper environment.",
+    "Use the best known top-5/bin stability profile and force Humanoid gamma to the paper value through the fixed-parameter contract."
+  ],
+  "target_envs": [
+    "FrankaCubeStack",
+    "Quadcopter",
+    "FrankaCabinet",
+    "BallBalance",
+    "ShadowHandOpenAI_FF",
+    "Anymal",
+    "Ant",
+    "AllegroHand",
+    "Humanoid",
+    "AllegroKuka",
+    "AllegroKukaTwoArmsLSTM",
+    "ShadowHand"
+  ],
+  "jobs": [
+    {"env":"FrankaCubeStack","seed":1,"variant":"known_best","overrides":{"prior_std":0.6,"target_norm":"running_return","cov_floor":0.04},"hypothesis":"Confirm the historical best complete cohort.","evidence":"Historical top-5/bin validation."},
+    {"env":"FrankaCubeStack","seed":2,"variant":"known_best","overrides":{"prior_std":0.6,"target_norm":"running_return","cov_floor":0.04},"hypothesis":"Confirm the historical best complete cohort.","evidence":"Historical top-5/bin validation."},
+    {"env":"FrankaCubeStack","seed":3,"variant":"known_best","overrides":{"prior_std":0.6,"target_norm":"running_return","cov_floor":0.04},"hypothesis":"Confirm the historical best complete cohort.","evidence":"Historical top-5/bin validation."},
+    {"env":"FrankaCubeStack","seed":4,"variant":"known_best","overrides":{"prior_std":0.6,"target_norm":"running_return","cov_floor":0.04},"hypothesis":"Confirm the historical best complete cohort.","evidence":"Historical top-5/bin validation."},
+
+    {"env":"Quadcopter","seed":1,"variant":"known_best","overrides":{"prior_std":1.16,"target_norm":"running_return","cov_floor":0.035},"hypothesis":"Confirm the historical best complete cohort.","evidence":"Historical top-5/bin validation."},
+    {"env":"Quadcopter","seed":2,"variant":"known_best","overrides":{"prior_std":1.16,"target_norm":"running_return","cov_floor":0.035},"hypothesis":"Confirm the historical best complete cohort.","evidence":"Historical top-5/bin validation."},
+    {"env":"Quadcopter","seed":3,"variant":"known_best","overrides":{"prior_std":1.16,"target_norm":"running_return","cov_floor":0.035},"hypothesis":"Confirm the historical best complete cohort.","evidence":"Historical top-5/bin validation."},
+    {"env":"Quadcopter","seed":4,"variant":"known_best","overrides":{"prior_std":1.16,"target_norm":"running_return","cov_floor":0.035},"hypothesis":"Confirm the historical best complete cohort.","evidence":"Historical top-5/bin validation."},
+
+    {"env":"FrankaCabinet","seed":1,"variant":"known_best","overrides":{"prior_std":0.9,"target_norm":"running_return","cov_floor":0.01},"hypothesis":"Confirm the precision-normalized historical profile.","evidence":"Legacy prior_std=0.8984375 is being revalidated on the 0.005 grid."},
+    {"env":"FrankaCabinet","seed":2,"variant":"known_best","overrides":{"prior_std":0.9,"target_norm":"running_return","cov_floor":0.01},"hypothesis":"Confirm the precision-normalized historical profile.","evidence":"Legacy prior_std=0.8984375 is being revalidated on the 0.005 grid."},
+    {"env":"FrankaCabinet","seed":3,"variant":"known_best","overrides":{"prior_std":0.9,"target_norm":"running_return","cov_floor":0.01},"hypothesis":"Confirm the precision-normalized historical profile.","evidence":"Legacy prior_std=0.8984375 is being revalidated on the 0.005 grid."},
+    {"env":"FrankaCabinet","seed":4,"variant":"known_best","overrides":{"prior_std":0.9,"target_norm":"running_return","cov_floor":0.01},"hypothesis":"Confirm the precision-normalized historical profile.","evidence":"Legacy prior_std=0.8984375 is being revalidated on the 0.005 grid."},
+
+    {"env":"BallBalance","seed":1,"variant":"known_best","overrides":{"prior_std":1.24,"target_norm":"running_return","cov_floor":0.025},"hypothesis":"Confirm the precision-normalized historical profile.","evidence":"Legacy cov_floor=0.0225 is being revalidated on the 0.005 grid."},
+    {"env":"BallBalance","seed":2,"variant":"known_best","overrides":{"prior_std":1.24,"target_norm":"running_return","cov_floor":0.025},"hypothesis":"Confirm the precision-normalized historical profile.","evidence":"Legacy cov_floor=0.0225 is being revalidated on the 0.005 grid."},
+    {"env":"BallBalance","seed":3,"variant":"known_best","overrides":{"prior_std":1.24,"target_norm":"running_return","cov_floor":0.025},"hypothesis":"Confirm the precision-normalized historical profile.","evidence":"Legacy cov_floor=0.0225 is being revalidated on the 0.005 grid."},
+    {"env":"BallBalance","seed":4,"variant":"known_best","overrides":{"prior_std":1.24,"target_norm":"running_return","cov_floor":0.025},"hypothesis":"Confirm the precision-normalized historical profile.","evidence":"Legacy cov_floor=0.0225 is being revalidated on the 0.005 grid."},
+
+    {"env":"ShadowHandOpenAI_FF","seed":1,"variant":"baseline","overrides":{"prior_std":1.0,"target_norm":"none","cov_floor":0.0},"hypothesis":"Establish the first complete top-5/bin baseline.","evidence":"No historical complete four-seed cohort."},
+    {"env":"ShadowHandOpenAI_FF","seed":2,"variant":"baseline","overrides":{"prior_std":1.0,"target_norm":"none","cov_floor":0.0},"hypothesis":"Establish the first complete top-5/bin baseline.","evidence":"No historical complete four-seed cohort."},
+    {"env":"ShadowHandOpenAI_FF","seed":3,"variant":"baseline","overrides":{"prior_std":1.0,"target_norm":"none","cov_floor":0.0},"hypothesis":"Establish the first complete top-5/bin baseline.","evidence":"No historical complete four-seed cohort."},
+    {"env":"ShadowHandOpenAI_FF","seed":4,"variant":"baseline","overrides":{"prior_std":1.0,"target_norm":"none","cov_floor":0.0},"hypothesis":"Establish the first complete top-5/bin baseline.","evidence":"No historical complete four-seed cohort."},
+
+    {"env":"Anymal","seed":1,"variant":"known_best","overrides":{"prior_std":1.05,"target_norm":"none","cov_floor":0.0},"hypothesis":"Confirm the historical best complete cohort.","evidence":"Historical top-5/bin validation."},
+    {"env":"Anymal","seed":2,"variant":"known_best","overrides":{"prior_std":1.05,"target_norm":"none","cov_floor":0.0},"hypothesis":"Confirm the historical best complete cohort.","evidence":"Historical top-5/bin validation."},
+    {"env":"Anymal","seed":3,"variant":"known_best","overrides":{"prior_std":1.05,"target_norm":"none","cov_floor":0.0},"hypothesis":"Confirm the historical best complete cohort.","evidence":"Historical top-5/bin validation."},
+    {"env":"Anymal","seed":4,"variant":"known_best","overrides":{"prior_std":1.05,"target_norm":"none","cov_floor":0.0},"hypothesis":"Confirm the historical best complete cohort.","evidence":"Historical top-5/bin validation."},
+
+    {"env":"Ant","seed":1,"variant":"known_best","overrides":{"prior_std":1.15,"target_norm":"running_return","cov_floor":0.05},"hypothesis":"Confirm the historical best complete cohort.","evidence":"Historical top-5/bin validation."},
+    {"env":"Ant","seed":2,"variant":"known_best","overrides":{"prior_std":1.15,"target_norm":"running_return","cov_floor":0.05},"hypothesis":"Confirm the historical best complete cohort.","evidence":"Historical top-5/bin validation."},
+    {"env":"Ant","seed":3,"variant":"known_best","overrides":{"prior_std":1.15,"target_norm":"running_return","cov_floor":0.05},"hypothesis":"Confirm the historical best complete cohort.","evidence":"Historical top-5/bin validation."},
+    {"env":"Ant","seed":4,"variant":"known_best","overrides":{"prior_std":1.15,"target_norm":"running_return","cov_floor":0.05},"hypothesis":"Confirm the historical best complete cohort.","evidence":"Historical top-5/bin validation."},
+
+    {"env":"AllegroHand","seed":1,"variant":"known_best","overrides":{"prior_std":1.15,"target_norm":"running_return","cov_floor":0.02},"hypothesis":"Retest the historical strongest complete cohort.","evidence":"Historical score 81.40 percent of paper."},
+    {"env":"AllegroHand","seed":2,"variant":"known_best","overrides":{"prior_std":1.15,"target_norm":"running_return","cov_floor":0.02},"hypothesis":"Retest the historical strongest complete cohort.","evidence":"Historical score 81.40 percent of paper."},
+    {"env":"AllegroHand","seed":3,"variant":"known_best","overrides":{"prior_std":1.15,"target_norm":"running_return","cov_floor":0.02},"hypothesis":"Retest the historical strongest complete cohort.","evidence":"Historical score 81.40 percent of paper."},
+    {"env":"AllegroHand","seed":4,"variant":"known_best","overrides":{"prior_std":1.15,"target_norm":"running_return","cov_floor":0.02},"hypothesis":"Retest the historical strongest complete cohort.","evidence":"Historical score 81.40 percent of paper."},
+
+    {"env":"Humanoid","seed":1,"variant":"gamma099_baseline","overrides":{"prior_std":1.0,"target_norm":"none","cov_floor":0.0},"hypothesis":"Measure the real baseline after fixing gamma to 0.99.","evidence":"Historical best used gamma 0.98 and reached 90.55 percent."},
+    {"env":"Humanoid","seed":2,"variant":"gamma099_baseline","overrides":{"prior_std":1.0,"target_norm":"none","cov_floor":0.0},"hypothesis":"Measure the real baseline after fixing gamma to 0.99.","evidence":"Historical best used gamma 0.98 and reached 90.55 percent."},
+    {"env":"Humanoid","seed":3,"variant":"gamma099_baseline","overrides":{"prior_std":1.0,"target_norm":"none","cov_floor":0.0},"hypothesis":"Measure the real baseline after fixing gamma to 0.99.","evidence":"Historical best used gamma 0.98 and reached 90.55 percent."},
+    {"env":"Humanoid","seed":4,"variant":"gamma099_baseline","overrides":{"prior_std":1.0,"target_norm":"none","cov_floor":0.0},"hypothesis":"Measure the real baseline after fixing gamma to 0.99.","evidence":"Historical best used gamma 0.98 and reached 90.55 percent."},
+
+    {"env":"AllegroKuka","seed":1,"variant":"known_best","overrides":{"prior_std":1.15,"target_norm":"running_return","cov_floor":0.02},"hypothesis":"Retest the historical strongest complete cohort.","evidence":"Historical score 88.36 percent of paper."},
+    {"env":"AllegroKuka","seed":2,"variant":"known_best","overrides":{"prior_std":1.15,"target_norm":"running_return","cov_floor":0.02},"hypothesis":"Retest the historical strongest complete cohort.","evidence":"Historical score 88.36 percent of paper."},
+    {"env":"AllegroKuka","seed":3,"variant":"known_best","overrides":{"prior_std":1.15,"target_norm":"running_return","cov_floor":0.02},"hypothesis":"Retest the historical strongest complete cohort.","evidence":"Historical score 88.36 percent of paper."},
+    {"env":"AllegroKuka","seed":4,"variant":"known_best","overrides":{"prior_std":1.15,"target_norm":"running_return","cov_floor":0.02},"hypothesis":"Retest the historical strongest complete cohort.","evidence":"Historical score 88.36 percent of paper."},
+
+    {"env":"AllegroKukaTwoArmsLSTM","seed":1,"variant":"known_best","overrides":{"prior_std":1.04,"target_norm":"running_return","cov_floor":0.01},"hypothesis":"Confirm the historical best complete cohort.","evidence":"Historical top-5/bin validation."},
+    {"env":"AllegroKukaTwoArmsLSTM","seed":2,"variant":"known_best","overrides":{"prior_std":1.04,"target_norm":"running_return","cov_floor":0.01},"hypothesis":"Confirm the historical best complete cohort.","evidence":"Historical top-5/bin validation."},
+    {"env":"AllegroKukaTwoArmsLSTM","seed":3,"variant":"known_best","overrides":{"prior_std":1.04,"target_norm":"running_return","cov_floor":0.01},"hypothesis":"Confirm the historical best complete cohort.","evidence":"Historical top-5/bin validation."},
+    {"env":"AllegroKukaTwoArmsLSTM","seed":4,"variant":"known_best","overrides":{"prior_std":1.04,"target_norm":"running_return","cov_floor":0.01},"hypothesis":"Confirm the historical best complete cohort.","evidence":"Historical top-5/bin validation."},
+
+    {"env":"ShadowHand","seed":1,"variant":"known_best","overrides":{"prior_std":1.05,"target_norm":"none","cov_floor":0.06},"hypothesis":"Retest the historical strongest unique cohort.","evidence":"Historical score 85.97 percent; copied cohorts are excluded."},
+    {"env":"ShadowHand","seed":2,"variant":"known_best","overrides":{"prior_std":1.05,"target_norm":"none","cov_floor":0.06},"hypothesis":"Retest the historical strongest unique cohort.","evidence":"Historical score 85.97 percent; copied cohorts are excluded."},
+    {"env":"ShadowHand","seed":3,"variant":"known_best","overrides":{"prior_std":1.05,"target_norm":"none","cov_floor":0.06},"hypothesis":"Retest the historical strongest unique cohort.","evidence":"Historical score 85.97 percent; copied cohorts are excluded."},
+    {"env":"ShadowHand","seed":4,"variant":"known_best","overrides":{"prior_std":1.05,"target_norm":"none","cov_floor":0.06},"hypothesis":"Retest the historical strongest unique cohort.","evidence":"Historical score 85.97 percent; copied cohorts are excluded."}
+  ]
+}

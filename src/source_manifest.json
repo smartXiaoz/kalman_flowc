@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "copied_at": "2026-08-08",
+  "sources": {
+    "flow_matching.py": {
+      "copied_from": "upstream FlowCritic source snapshot",
+      "upstream_sha256": "e73e44efefd3d6eb27cf0c1cba8850a55ee4cc19b6ed3588b0e459d61f75b74c",
+      "local_sha256": "e73e44efefd3d6eb27cf0c1cba8850a55ee4cc19b6ed3588b0e459d61f75b74c",
+      "changes": []
+    },
+    "flow_ppo_single2.py": {
+      "copied_from": "upstream FlowCritic source snapshot",
+      "upstream_sha256": "ebee17f281cebf41bd96af0ac74d2a6c68731190b841fb88b4a67167842cd5f6",
+      "local_sha256": "0df6736e96729cbb167b4c8e902b1d4e9fcedf8a4950c1823ce5d78e0371c762",
+      "changes": [
+        "Resolve the default config and runs directory from the standalone project root.",
+        "Accept --reward-log-path so rewards.txt can live inside each job directory.",
+        "Record effective_total_timesteps and completed_budget without changing floor-division training length."
+      ]
+    }
+  },
+  "invariants": {
+    "model_L_unchanged": true,
+    "flow_matching_unchanged": true,
+    "rollout_mean_mode": "remove_max",
+    "bootstrap_mean_mode": "normal",
+    "training_algorithm_changed": false
+  }
+}

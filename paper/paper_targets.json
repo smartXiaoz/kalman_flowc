@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "source": "FlowCritic paper main performance table (values transcribed for this release)",
+  "success_ratio": 0.9,
+  "bin_size": 200000,
+  "top_k": 5,
+  "tail_fraction": 0.1,
+  "seeds": [1, 2, 3, 4],
+  "environments": {
+    "FrankaCubeStack": {"paper_mean": 16.3, "paper_std": 1.63, "budget": 100000000},
+    "Quadcopter": {"paper_mean": 1393.56, "paper_std": 6.95, "budget": 100000000},
+    "FrankaCabinet": {"paper_mean": 3511.01, "paper_std": 33.21, "budget": 80000000},
+    "BallBalance": {"paper_mean": 377.87, "paper_std": 1.38, "budget": 100000000},
+    "ShadowHandOpenAI_FF": {"paper_mean": 376.99, "paper_std": 30.59, "budget": 100000000},
+    "Anymal": {"paper_mean": 69.63, "paper_std": 0.16, "budget": 80000000},
+    "Ant": {"paper_mean": 9345.29, "paper_std": 182.16, "budget": 100000000},
+    "AllegroHand": {"paper_mean": 1044.12, "paper_std": 103.53, "budget": 100000000},
+    "Humanoid": {"paper_mean": 8863.61, "paper_std": 114.08, "budget": 100000000},
+    "AllegroKuka": {"paper_mean": 529.3, "paper_std": 50.44, "budget": 100000000},
+    "AllegroKukaTwoArmsLSTM": {"paper_mean": 339.87, "paper_std": 27.0, "budget": 100000000},
+    "ShadowHand": {"paper_mean": 1025.76, "paper_std": 427.69, "budget": 100000000}
+  }
+}

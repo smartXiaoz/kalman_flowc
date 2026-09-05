@@ -1,0 +1,243 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://flowcritic.local/schemas/next_plan.schema.json",
+  "title": "FlowCritic paper-tuning next-round plan",
+  "description": "A proposal only. This object is validated locally before any training configuration is materialized.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "status",
+    "target_envs",
+    "reasoning",
+    "jobs"
+  ],
+  "properties": {
+    "status": {
+      "type": "string",
+      "enum": [
+        "continue",
+        "stop",
+        "blocked"
+      ]
+    },
+    "target_envs": {
+      "type": "array",
+      "maxItems": 12,
+      "items": {
+        "$ref": "#/$defs/environment"
+      }
+    },
+    "reasoning": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 64,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 4000
+      }
+    },
+    "jobs": {
+      "type": "array",
+      "maxItems": 48,
+      "items": {
+        "$ref": "#/$defs/job"
+      }
+    }
+  },
+  "$defs": {
+    "environment": {
+      "type": "string",
+      "enum": [
+        "FrankaCubeStack",
+        "Quadcopter",
+        "FrankaCabinet",
+        "BallBalance",
+        "ShadowHandOpenAI_FF",
+        "Anymal",
+        "Ant",
+        "AllegroHand",
+        "Humanoid",
+        "AllegroKuka",
+        "AllegroKukaTwoArmsLSTM",
+        "ShadowHand"
+      ]
+    },
+    "job": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "env",
+        "seed",
+        "variant",
+        "overrides",
+        "hypothesis",
+        "evidence"
+      ],
+      "properties": {
+        "env": {
+          "$ref": "#/$defs/environment"
+        },
+        "seed": {
+          "type": "integer",
+          "enum": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        "variant": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 64,
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*$"
+        },
+        "overrides": {
+          "$ref": "#/$defs/overrides"
+        },
+        "hypothesis": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4000
+        },
+        "evidence": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 4000
+        }
+      }
+    },
+    "overrides": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "prior_std",
+        "target_norm",
+        "cov_floor",
+        "reward_scaler",
+        "acf_coef",
+        "vf_coef",
+        "flow_sigma",
+        "target_norm_update",
+        "target_norm_ema_tau",
+        "cov_weight_clip",
+        "ess_floor",
+        "alpha_warmup_updates",
+        "old_critic_update",
+        "old_critic_ema_tau",
+        "bootstrap_mean_mode"
+      ],
+      "properties": {
+        "prior_std": {
+          "anyOf": [
+            {"type": "null"},
+            {"type": "number", "minimum": 0.1, "maximum": 4.0}
+          ]
+        },
+        "target_norm": {
+          "anyOf": [
+            {"type": "null"},
+            {"type": "string", "enum": ["none", "running_return"]}
+          ]
+        },
+        "cov_floor": {
+          "anyOf": [
+            {"type": "null"},
+            {"type": "number", "minimum": 0.0, "maximum": 10.0}
+          ]
+        },
+        "reward_scaler": {
+          "anyOf": [
+            {"type": "null"},
+            {"type": "number", "exclusiveMinimum": 0.0, "maximum": 10.0}
+          ]
+        },
+        "acf_coef": {
+          "anyOf": [
+            {"type": "null"},
+            {"type": "number", "exclusiveMinimum": 0.0, "maximum": 10.0}
+          ]
+        },
+        "vf_coef": {
+          "anyOf": [
+            {"type": "null"},
+            {"type": "number", "exclusiveMinimum": 0.0, "maximum": 10.0}
+          ]
+        },
+        "flow_sigma": {
+          "anyOf": [
+            {"type": "null"},
+            {"type": "number", "minimum": 0.0, "maximum": 1.0}
+          ]
+        },
+        "target_norm_update": {
+          "anyOf": [
+            {"type": "null"},
+            {"type": "string", "enum": ["cumulative", "running", "ema"]}
+          ]
+        },
+        "target_norm_ema_tau": {
+          "anyOf": [
+            {"type": "null"},
+            {"type": "number", "minimum": 0.0, "maximum": 0.9999}
+          ]
+        },
+        "cov_weight_clip": {
+          "anyOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "array",
+              "minItems": 2,
+              "maxItems": 2,
+              "items": {
+                "anyOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "type": "number",
+                    "minimum": 0.0,
+                    "maximum": 1.0
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "ess_floor": {
+          "anyOf": [
+            {"type": "null"},
+            {"type": "number", "minimum": 0.0, "maximum": 1.0}
+          ]
+        },
+        "alpha_warmup_updates": {
+          "anyOf": [
+            {"type": "null"},
+            {"type": "integer", "minimum": 0, "maximum": 100000}
+          ]
+        },
+        "old_critic_update": {
+          "anyOf": [
+            {"type": "null"},
+            {"type": "string", "enum": ["hard", "ema"]}
+          ]
+        },
+        "old_critic_ema_tau": {
+          "anyOf": [
+            {"type": "null"},
+            {"type": "number", "minimum": 0.0, "maximum": 0.99999}
+          ]
+        },
+        "bootstrap_mean_mode": {
+          "anyOf": [
+            {"type": "null"},
+            {"type": "string", "enum": ["normal", "remove_max", "remove_max_min"]}
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "note": "Round 000 profiles. reward_scaler/acf_coef/vf_coef/flow_sigma are inherited from the current per-environment configs.",
+  "profiles": {
+    "FrankaCubeStack": {
+      "prior_std": 0.6,
+      "target_norm": "running_return",
+      "cov_floor": 0.04,
+      "reward_scaler": 0.1,
+      "acf_coef": 1,
+      "vf_coef": 2,
+      "flow_sigma": 0.02
+    },
+    "Quadcopter": {
+      "prior_std": 1.16,
+      "target_norm": "running_return",
+      "cov_floor": 0.035,
+      "reward_scaler": 0.05,
+      "acf_coef": 2,
+      "vf_coef": 1,
+      "flow_sigma": 0.1
+    },
+    "FrankaCabinet": {
+      "prior_std": 0.9,
+      "target_norm": "running_return",
+      "cov_floor": 0.01,
+      "reward_scaler": 0.01,
+      "acf_coef": 0.1,
+      "vf_coef": 1,
+      "flow_sigma": 0.1
+    },
+    "BallBalance": {
+      "prior_std": 1.24,
+      "target_norm": "running_return",
+      "cov_floor": 0.025,
+      "reward_scaler": 0.1,
+      "acf_coef": 1,
+      "vf_coef": 1,
+      "flow_sigma": 0.1
+    },
+    "ShadowHandOpenAI_FF": {
+      "prior_std": 1,
+      "target_norm": "none",
+      "cov_floor": 0,
+      "reward_scaler": 0.01,
+      "acf_coef": 2,
+      "vf_coef": 1,
+      "flow_sigma": 0.02
+    },
+    "Anymal": {
+      "prior_std": 1.05,
+      "target_norm": "none",
+      "cov_floor": 0,
+      "reward_scaler": 2,
+      "acf_coef": 2,
+      "vf_coef": 1,
+      "flow_sigma": 0.1
+    },
+    "Ant": {
+      "prior_std": 1.15,
+      "target_norm": "running_return",
+      "cov_floor": 0.05,
+      "reward_scaler": 0.002,
+      "acf_coef": 2,
+      "vf_coef": 1,
+      "flow_sigma": 0
+    },
+    "AllegroHand": {
+      "prior_std": 1.15,
+      "target_norm": "running_return",
+      "cov_floor": 0.02,
+      "reward_scaler": 0.1,
+      "acf_coef": 2,
+      "vf_coef": 1,
+      "flow_sigma": 0.1
+    },
+    "Humanoid": {
+      "prior_std": 1,
+      "target_norm": "none",
+      "cov_floor": 0,
+      "reward_scaler": 0.01,
+      "acf_coef": 1,
+      "vf_coef": 1,
+      "flow_sigma": 0.1
+    },
+    "AllegroKuka": {
+      "prior_std": 1.15,
+      "target_norm": "running_return",
+      "cov_floor": 0.02,
+      "reward_scaler": 0.1,
+      "acf_coef": 1,
+      "vf_coef": 1,
+      "flow_sigma": 0.1
+    },
+    "AllegroKukaTwoArmsLSTM": {
+      "prior_std": 1.04,
+      "target_norm": "running_return",
+      "cov_floor": 0.01,
+      "reward_scaler": 0.05,
+      "acf_coef": 1,
+      "vf_coef": 1,
+      "flow_sigma": 0.02
+    },
+    "ShadowHand": {
+      "prior_std": 1.05,
+      "target_norm": "none",
+      "cov_floor": 0.06,
+      "reward_scaler": 0.05,
+      "acf_coef": 2,
+      "vf_coef": 1,
+      "flow_sigma": 0.1
+    }
+  }
+}
