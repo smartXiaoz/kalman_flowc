@@ -141,7 +141,8 @@ top-five selection effect is driving an apparent improvement.
 
 ## Quick Start
 
-First check the source without loading Isaac Gym:
+First check the source without loading Isaac Gym (use the Python executable
+from your conda environment if `python` is not on `PATH`):
 
 ```bash
 python -m py_compile src/flow_matching.py src/flow_ppo_single2.py
