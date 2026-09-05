@@ -1,6 +1,7 @@
 # Release Result Summary
 
-- Snapshot generated: `2026-09-05T16:18:55+08:00`
+- Score table generated: `2026-09-05T16:18:55+08:00`
+- Incumbent/config state source: `2026-09-05T16:14:04+08:00`
 - Source workspace: `local tuning workspace (path intentionally omitted)`
 - Historical unique complete cohorts: `932`
 - Latest completed round: `round_117_gpt_stage3`

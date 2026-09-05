@@ -12,8 +12,9 @@ the machine-readable scores and incumbent tunables are in
 [`results/incumbent_snapshot.json`](results/incumbent_snapshot.json) and
 [`results/incumbent_configs.json`](results/incumbent_configs.json). It was
 generated from the latest complete cohorts available at the snapshot time
-(932 unique complete cohorts; round 117 was the latest completed round; round
-118 was still running and is excluded).
+(932 unique complete cohorts; the score table was generated at 16:18:55 and
+the incumbent/config state source at 16:14:04 on 2026-09-05; round 117 was the
+latest completed round; round 118 was still running and is excluded).
 
 Nine of twelve accepted incumbents meet at least 90% of the paper mean. Three
 remain below the target:
