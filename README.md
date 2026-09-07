@@ -119,11 +119,9 @@ A round directory contains a manifest and one run directory per job. Each run di
   number={01},
   pages={1-17},
   doi={10.1109/TPAMI.2026.3728663},
-  publisher={IEEE Computer Society}
+  
 }
 ```
-
-The supplied citation record used a placeholder publication year. The citation above follows the year associated with the DOI metadata; verify the final bibliographic fields against the IEEE page before submission.
 
 ## Assets
 
